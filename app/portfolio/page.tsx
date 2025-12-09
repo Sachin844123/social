@@ -5,13 +5,15 @@ import Footer from '@/components/Footer';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
+import { Shirt, Smartphone, Dumbbell, UtensilsCrossed, Gamepad2, Music } from 'lucide-react';
+
 const portfolioItems = [
-  { id: 1, platform: 'Instagram', niche: 'Fashion', image: '👗', growth: '+900%' },
-  { id: 2, platform: 'YouTube', niche: 'Tech', image: '📱', growth: '+1100%' },
-  { id: 3, platform: 'TikTok', niche: 'Fitness', image: '💪', growth: '+1300%' },
-  { id: 4, platform: 'Instagram', niche: 'Food', image: '🍕', growth: '+750%' },
-  { id: 5, platform: 'YouTube', niche: 'Gaming', image: '🎮', growth: '+850%' },
-  { id: 6, platform: 'TikTok', niche: 'Dance', image: '💃', growth: '+1000%' },
+  { id: 1, platform: 'Instagram', niche: 'Fashion', icon: Shirt, growth: '+900%' },
+  { id: 2, platform: 'YouTube', niche: 'Tech', icon: Smartphone, growth: '+1100%' },
+  { id: 3, platform: 'TikTok', niche: 'Fitness', icon: Dumbbell, growth: '+1300%' },
+  { id: 4, platform: 'Instagram', niche: 'Food', icon: UtensilsCrossed, growth: '+750%' },
+  { id: 5, platform: 'YouTube', niche: 'Gaming', icon: Gamepad2, growth: '+850%' },
+  { id: 6, platform: 'TikTok', niche: 'Dance', icon: Music, growth: '+1000%' },
 ];
 
 export default function PortfolioPage() {
@@ -69,7 +71,9 @@ export default function PortfolioPage() {
                 whileHover={{ y: -10 }}
                 className="neumorphic p-8 rounded-2xl cursor-pointer group"
               >
-                <div className="text-7xl mb-4 text-center">{item.image}</div>
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-silver rounded-full flex items-center justify-center">
+                  <item.icon className="w-10 h-10 text-light-primary" />
+                </div>
                 <div className="text-center">
                   <span className="inline-block px-3 py-1 bg-gradient-silver rounded-full text-sm mb-3">
                     {item.platform}

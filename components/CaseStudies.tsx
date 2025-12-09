@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
 
+import { Palette, Smartphone, Dumbbell } from 'lucide-react';
+
 const caseStudies = [
   {
     name: 'Fashion Influencer',
@@ -10,7 +12,7 @@ const caseStudies = [
     before: '50K',
     after: '500K',
     growth: '900%',
-    image: '🎨',
+    icon: Palette,
   },
   {
     name: 'Tech Reviewer',
@@ -18,7 +20,7 @@ const caseStudies = [
     before: '100K',
     after: '1.2M',
     growth: '1100%',
-    image: '📱',
+    icon: Smartphone,
   },
   {
     name: 'Fitness Coach',
@@ -26,7 +28,7 @@ const caseStudies = [
     before: '25K',
     after: '350K',
     growth: '1300%',
-    image: '💪',
+    icon: Dumbbell,
   },
 ];
 
@@ -59,7 +61,9 @@ export default function CaseStudies() {
               whileHover={{ y: -10 }}
               className="glass-effect p-8 rounded-2xl cursor-pointer group"
             >
-              <div className="text-6xl mb-4">{study.image}</div>
+              <div className="w-16 h-16 mx-auto mb-6 bg-gradient-silver rounded-full flex items-center justify-center">
+                <study.icon className="w-8 h-8 text-light-primary" />
+              </div>
               <h3 className="text-2xl font-bold text-light-primary mb-2">
                 {study.name}
               </h3>

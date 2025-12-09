@@ -4,12 +4,14 @@ import { motion } from 'framer-motion';
 import { Star } from 'lucide-react';
 import { useState } from 'react';
 
+import { User } from 'lucide-react';
+
 const testimonials = [
   {
     name: 'Sarah Johnson',
     role: 'Fashion Influencer',
     followers: '500K',
-    image: '👩',
+    initial: 'SJ',
     text: 'Social Elite transformed my Instagram presence. My engagement tripled in just 3 months!',
     rating: 5,
   },
@@ -17,7 +19,7 @@ const testimonials = [
     name: 'Mike Chen',
     role: 'Tech Reviewer',
     followers: '1.2M',
-    image: '👨',
+    initial: 'MC',
     text: 'The best decision I made for my channel. Professional, data-driven, and results-focused.',
     rating: 5,
   },
@@ -25,7 +27,7 @@ const testimonials = [
     name: 'Emma Davis',
     role: 'Fitness Coach',
     followers: '350K',
-    image: '👩‍🦰',
+    initial: 'ED',
     text: 'They handle everything so I can focus on creating content. Absolutely worth it!',
     rating: 5,
   },
@@ -62,8 +64,8 @@ export default function Testimonials() {
               className="neumorphic p-8 rounded-2xl"
             >
               <div className="flex items-center mb-6">
-                <div className="w-16 h-16 rounded-full bg-gradient-silver flex items-center justify-center text-3xl mr-4 ring-4 ring-silver-dark/30">
-                  {testimonial.image}
+                <div className="w-16 h-16 rounded-full bg-gradient-silver flex items-center justify-center mr-4 ring-4 ring-silver-dark/30">
+                  <span className="text-xl font-bold text-light-primary">{testimonial.initial}</span>
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-light-primary">

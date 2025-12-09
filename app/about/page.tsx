@@ -63,8 +63,8 @@ export default function AboutPage() {
             className="max-w-4xl mx-auto mb-24"
           >
             <div className="glass-effect p-12 rounded-2xl text-center">
-              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-silver flex items-center justify-center text-6xl">
-                👥
+              <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-silver flex items-center justify-center">
+                <Users className="w-16 h-16 text-light-primary" />
               </div>
               <h2 className="text-3xl font-bold text-light-primary mb-4">
                 Our Mission
